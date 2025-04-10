@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyatakan Perasaan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #ffe6e6, #ffc2d1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+        h2 {
+            color: #ff4d6d;
+        }
+        p {
+            font-size: 18px;
+            color: #444;
+        }
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .response {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Hai kamu... ❤️</h2>
+        <p>Aku punya sesuatu yang pengen aku bilang...</p>
+        <p><strong>Aku suka kamu 😳</strong></p>
+        <p>Maukah kamu jadi orang spesial dalam hidupku?</p>
+
+        <div>
+            <button onclick="jawaban('terima')">Terima</button>
+            <button onclick="jawaban('tidak')">Tidak</button>
+        </div>
+
+        <div class="response" id="response"></div>
+    </div>
+
+    <script>
+        function jawaban(pilihan) {
+            const response = document.getElementById('response');
+
+            if (pilihan === 'terima') {
+                response.innerHTML = "Yay!! Aku seneng banget! Makasih ya udah nerima aku 😍";
+                window.location.href = "https://contoh.com/terima";
+            } else {
+                response.innerHTML = "Gak apa-apa kok. Makasih udah jujur 😊";
+                window.location.href = "https://contoh.com/tidak";
+            }
+        }
+    </script>
+
+</body>
+</html>
